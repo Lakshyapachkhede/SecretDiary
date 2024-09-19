@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="myPrimary">#d1009a</color>
+    <color name="myPrimaryDark">#212121</color>
+    <color name="drawerIcon">#f3d731</color>
+    <color name="diaryDateBackground">#d8d8d8</color>
+    <color name="diaryDateYear">#a1a1a1</color>
+    <color name="textColor">#a73485</color>
+    <color name="month1">#e51f8d</color>
+    <color name="month2">#cc2024</color>
+    <color name="month3">#ed6738</color>
+    <color name="month4">#f1842e</color>
+    <color name="month5">#ebe744</color>
+    <color name="month6">#b8e34f</color>
+    <color name="month7">#b8e34f</color>
+    <color name="month8">#0f32e9</color>
+    <color name="month9">#0f32e9</color>
+    <color name="month10">#3c229d</color>
+    <color name="month11">#7229a5</color>
+    <color name="month12">#ad3c93</color>
+
+
+
+
+</resources>

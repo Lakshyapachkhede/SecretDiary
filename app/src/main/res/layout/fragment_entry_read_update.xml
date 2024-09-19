@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EntryReadUpdateFragment"
+    android:orientation="vertical"
+    android:background="@color/myPrimary"
+    android:padding="20dp">
+
+   <LinearLayout
+       android:id="@+id/date_picker_layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/text_input_background">
+       
+       <ImageView
+           android:layout_width="24dp"
+           android:layout_height="24dp"
+           android:src="@drawable/calender_icon"
+           android:layout_gravity="center_vertical"
+           app:tint="@color/diaryDateYear"
+           />
+
+       <TextView
+           android:id="@+id/diary_entry_date"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Saturday, 14 September 2024"
+           android:textColor="@color/myPrimary"
+           android:layout_gravity="center_vertical"
+           android:layout_marginStart="10dp"
+           android:textSize="16sp"/>
+
+   </LinearLayout>
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_input_background"
+        android:layout_marginTop="10dp"
+        android:hint="Add title"
+        android:drawableLeft="@drawable/add_icon"
+        android:drawableTint="@color/diaryDateYear"
+        android:drawablePadding="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/myPrimary"
+        />
+
+
+    <com.pachkhede.secretdiary.PageEditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/myPrimary"
+        android:hint="Start typing here."
+        android:inputType="textMultiLine"
+        android:minLines="10"
+        android:lineSpacingExtra="10dp"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"
+        android:background="@drawable/text_input_background"
+
+        />
+
+
+
+
+</LinearLayout>

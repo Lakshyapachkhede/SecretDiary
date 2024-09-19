@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:padding="14dp"
+    android:background="#E91E63"
+    >
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/a"
+        android:layout_marginStart="15dp"
+        android:contentDescription="Header Image"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lakshya Pachkhede"
+        android:textSize="25sp"
+        android:textColor="#FFF"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pachkhedelakshya@gmail.com"
+        android:textSize="18sp"
+        android:textColor="#000000"
+
+        />
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SecretDiary" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/myPrimary</item>
+        <item name="colorPrimaryDark">@color/myPrimaryDark</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/myPrimaryDark</item>
+    </style>
+</resources>

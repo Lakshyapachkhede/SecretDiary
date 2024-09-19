@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/month1"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/diaryDateBackground"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JUN"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:background="@color/month1"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:paddingBottom="3dp"
+            />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:layout_marginTop="7dp"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:text="Hello i am lakshya pachkhede. "
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:text="Hello i am lakshya pachkhede. "
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+
+        />
+
+
+</LinearLayout>
+
+
+
+
+
+</LinearLayout>

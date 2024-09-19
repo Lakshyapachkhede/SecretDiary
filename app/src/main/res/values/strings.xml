@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Secret Diary</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="OpenDrawer">OpenDrawer</string>
+    <string name="CloseDrawer">CloseDrawer</string>
+
+
+</resources>

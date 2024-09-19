@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background color (if needed) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+
+    <!-- Horizontal lines -->
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="1dp" />
+            <solid android:color="#E0E0E0" /> <!-- Line color -->
+        </shape>
+    </item>
+
+    <!-- Repeat the line spacing by using inset -->
+    <item android:top="30dp">
+        <shape android:shape="rectangle">
+            <size android:height="1dp" />
+            <solid android:color="#E0E0E0" /> <!-- Line color -->
+        </shape>
+    </item>
+
+    <!-- Add more lines if necessary, adjusting "android:top" for spacing -->
+</layer-list>
