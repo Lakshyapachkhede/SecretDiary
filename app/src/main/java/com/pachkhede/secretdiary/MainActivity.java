@@ -1,6 +1,8 @@
 package com.pachkhede.secretdiary;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,16 +12,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
-import java.io.FileReader;
 
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainFragment.OnAddButtonClickListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+
 
 
     @Override
@@ -29,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         initViews();
 
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(MainActivity.this, drawerLayout, toolbar, R.string.OpenDrawer, R.string.CloseDrawer);
         actionBarDrawerToggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white));
@@ -38,12 +42,14 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
 
-        loadFragment(new EntryReadUpdateFragment(), false);
+        loadFragment(new MainFragment(), false, false);
+
+
 
     }
 
 
-    private void loadFragment(Fragment fragment, boolean replace) {
+    private void loadFragment(Fragment fragment, boolean replace, boolean addToBackStack) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
@@ -53,7 +59,14 @@ public class MainActivity extends AppCompatActivity {
             ft.add(R.id.main_fragment_container, fragment);
         }
 
+        if (addToBackStack) {
+            ft.addToBackStack(null);
+        }
         ft.commit();
+    }
+
+    public void detachFragment() {
+        getSupportFragmentManager().popBackStack();
     }
 
     private void initViews() {
@@ -63,6 +76,20 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public void onAddButtonClicked() {
+        loadFragment(new EntryAddFragment(), true, true);
+    }
+
+
+
 
 
 

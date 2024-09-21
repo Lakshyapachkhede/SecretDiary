@@ -68,8 +68,8 @@ public class DiaryDatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public List<DiaryEntry> getAllDiaryEntries() {
-        List<DiaryEntry> diaryEntries = new ArrayList<>();
+    public ArrayList<DiaryEntry> getAllDiaryEntries() {
+        ArrayList<DiaryEntry> diaryEntries = new ArrayList<>();
 
         String query = "SELECT * FROM " + TABLE_DIARY + " ORDER BY " + COLUMN_DATE + " DESC";
 
@@ -155,6 +155,11 @@ public class DiaryDatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void clearDatabase() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM " + TABLE_DIARY);  // Delete all rows from the table
+        db.close();
+    }
 
 
 

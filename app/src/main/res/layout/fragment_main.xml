@@ -5,8 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainFragment"
-
+    android:background="@color/myPrimary"
     >
+
+    <ImageView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/spiral_diary_image"
+        android:rotation="25"
+        android:translationX="80dp"
+        android:translationY="80dp"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/diaryEntryRecylerView"
@@ -17,18 +28,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/add_entry_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:src="@drawable/add_icon"
-        android:tint="@color/white"
+        app:tint="@color/white"
         app:backgroundTint="@color/myPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
         />
+
+
 
 
 

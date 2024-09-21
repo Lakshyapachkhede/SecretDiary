@@ -1,6 +1,8 @@
 package com.pachkhede.secretdiary;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class DiaryEntry {
     private int id;
@@ -49,4 +51,27 @@ public class DiaryEntry {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    public String  getMonthAbbreviation() {
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM", Locale.US);
+        return sdf.format(this.getDate()).toUpperCase();
+    }
+
+    public String getMonth() {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM");
+        return sdf.format(this.getDate());
+    }
+
+    public String  getYear() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+        return sdf.format(this.getDate());
+    }
+
+    public String getDay() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd");
+        return sdf.format(this.getDate());
+    }
+
+
+
 }

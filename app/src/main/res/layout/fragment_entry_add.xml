@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".EntryReadUpdateFragment"
+    tools:context=".EntryAddFragment"
     android:orientation="vertical"
     android:background="@color/myPrimary"
-    android:padding="20dp">
+    android:padding="10dp">
 
    <LinearLayout
        android:id="@+id/date_picker_layout"
@@ -39,6 +39,7 @@
 
 
     <EditText
+        android:id="@+id/title_entry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/text_input_background"
@@ -49,10 +50,12 @@
         android:drawablePadding="10dp"
         android:textSize="16sp"
         android:textColor="@color/myPrimary"
+        android:maxLength="80"
         />
 
 
     <com.pachkhede.secretdiary.PageEditText
+        android:id="@+id/content_entry"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"

@@ -23,6 +23,9 @@
         app:headerLayout="@layout/navigation_header_layout"
         app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
+        android:background="@color/myPrimaryDark"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/drawerIcon"
         />
 
 
