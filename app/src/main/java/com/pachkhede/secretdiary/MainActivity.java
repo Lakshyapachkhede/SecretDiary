@@ -1,12 +1,16 @@
 package com.pachkhede.secretdiary;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -40,7 +44,21 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnAd
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
 
         actionBarDrawerToggle.syncState();
+        
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
 
+                if (id == R.id.lock_icon) {
+                    Intent intent = new Intent(MainActivity.this, LockSetupActivity.class);
+                    startActivity(intent);
+                }
+
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
 
         loadFragment(new MainFragment(), false, false);
 
@@ -88,9 +106,21 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnAd
         loadFragment(new EntryAddFragment(), true, true);
     }
 
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+
+        if (level == TRIM_MEMORY_UI_HIDDEN){
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
 
 
-
-
-
+    }
 }
+
+
+
+
+
+

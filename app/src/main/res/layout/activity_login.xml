@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LockSetupActivity"
+    android:background="@color/myPrimary"
+    android:gravity="center_horizontal"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pacifico"
+        android:text="Diary"
+        android:textColor="@color/white"
+        android:textSize="80sp"
+        android:layout_marginTop="90dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A collection of notes from your life."
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/code_lock_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:hint="Enter code"
+        android:drawableTint="@color/myPrimaryDark"
+        android:drawableLeft="@drawable/code_lock_icon"
+        android:drawablePadding="20dp"
+        android:background="@drawable/code_lock_input"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:inputType="textPassword"
+        />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/unlock_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UNLOCK"
+        />
+
+    <Button
+        android:id="@+id/forgot_password_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FORGOT CODE?"
+
+        />
+
+
+</LinearLayout>
