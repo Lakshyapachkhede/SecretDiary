@@ -8,19 +8,9 @@
         android:tint="?attr/colorControlNormal"
         />
 
-    <item android:title="Set Color Theme"
-        android:id="@+id/color_icon"
-        android:icon="@drawable/color_icon"
-        android:tint="?attr/colorControlNormal"
-
-
-        />
-
     <item android:title="Developer"
         android:id="@+id/web_icon"
         android:icon="@drawable/web_icon"
         android:tint="?attr/colorControlNormal"
-
-
         />
 </menu>

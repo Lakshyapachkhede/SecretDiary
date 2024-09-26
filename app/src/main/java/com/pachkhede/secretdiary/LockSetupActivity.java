@@ -119,7 +119,8 @@ public class LockSetupActivity extends AppCompatActivity {
                         .setTitle("Deactivate codelock?")
                         .setPositiveButton("Yes", (dialog, which) -> {
                             SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putBoolean("isLockEnabled", false);
+                            editor.putBoolean(LockSetupActivity.prefIsLockEnabled, false);
+                            editor.apply();
                             Toast.makeText(LockSetupActivity.this, "Code Lock Disabled", Toast.LENGTH_SHORT).show();
 
                         })

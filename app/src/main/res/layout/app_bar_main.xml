@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:background="@color/myPrimaryDark"
             app:titleTextColor="@color/white"
-            app:menu="@menu/toolbar_menu_main"
+
             />
 
     </com.google.android.material.appbar.AppBarLayout>

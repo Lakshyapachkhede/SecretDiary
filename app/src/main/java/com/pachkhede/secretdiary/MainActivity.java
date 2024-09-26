@@ -1,6 +1,8 @@
 package com.pachkhede.secretdiary;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +20,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.concurrent.locks.Lock;
 
 
 public class MainActivity extends AppCompatActivity implements MainFragment.OnAddButtonClickListener {
@@ -53,8 +57,15 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnAd
                 if (id == R.id.lock_icon) {
                     Intent intent = new Intent(MainActivity.this, LockSetupActivity.class);
                     startActivity(intent);
-                }
+                } else if (id == R.id.web_icon) {
+                    String url = "https://lakshyapachkhede.github.io/Lakshyapachkhede/";
 
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(url));
+
+                    startActivity(intent);
+
+                }
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
@@ -95,11 +106,9 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnAd
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.toolbar_menu_main, menu);
-        return true;
-    }
+
+
+
 
     @Override
     public void onAddButtonClicked() {
@@ -109,10 +118,12 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnAd
     @Override
     public void onTrimMemory(int level) {
         super.onTrimMemory(level);
-
-        if (level == TRIM_MEMORY_UI_HIDDEN){
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+        SharedPreferences sharedPreferences = getSharedPreferences(LockSetupActivity.preferencesName, MODE_PRIVATE);
+        if (sharedPreferences.getBoolean(LockSetupActivity.prefIsLockEnabled, false)) {
+            if (level == TRIM_MEMORY_UI_HIDDEN) {
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+            }
         }
 
 
